@@ -1,7 +1,36 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class CISQueue {
 
+    private Queue<Integer> queue;
+
+    public CISQueue() {
+        this.queue=new LinkedList<>();
+    }
+
+    public void enqueue(int num){
+        queue.add(num);
+    }
+    public int dequeue(){
+        return queue.poll();
+    }
+
+    public boolean isEmpty(){
+        return queue.isEmpty();
+    }
+
+    public int size() {
+        return queue.size();
+    }
+
+    public String toString(){
+        String s = "";
+        s = s + "CISQueue{queue=" + queue;
+        s = s + ", size=" + queue.size() + "}";
+        return s;
+    }
     // Linked list property.
 
     // Size property.
